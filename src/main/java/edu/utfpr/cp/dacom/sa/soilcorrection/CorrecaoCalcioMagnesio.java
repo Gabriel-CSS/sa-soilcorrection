@@ -14,4 +14,17 @@ public class CorrecaoCalcioMagnesio implements ICorrecaoNutriente<FonteCalcioMag
 
         return qtdeCorretivoAplicar * 100 / prnt;
     }
+     
+    public double calculaEnxofreFornecido(double qtdeAplicar, int fonteNutriente) {
+        
+        if (qtdeAplicar <= 0) {
+            throw new IllegalArgumentException();
+        }
+        
+        if (fonteNutriente != 4) {
+            return 0;
+        }
+
+        return qtdeAplicar * 150;
+    }
 }

@@ -29,9 +29,19 @@ public class TestaCorrecaoCalcioMagnesio {
     public void testaCustoReaisHa() {
 
         var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
+        
+        var qtdeAplicar = new ConverteTonHaEmKgHa().converte(1.84536405710763);
 
-        var qtdeAplicar = new ConverteTonHaEmKgHa().converte(1.850);
+        assertEquals(922.682028553815, correcaoCalcioMagnesio.calculaCusto(500.0, qtdeAplicar));
+    }
 
-        assertEquals(922.68, correcaoCalcioMagnesio.calculaCusto(500.0, qtdeAplicar));
+    @Test
+    public void testaCalculaEnxofreFornecido() {
+
+        var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
+
+        var qtdeAplicar = new ConverteTonHaEmKgHa().converte(1.84536405710763);//1.85
+
+        assertEquals(922.682028553815, correcaoCalcioMagnesio.calculaCusto(500.0, qtdeAplicar));
     }
 }
