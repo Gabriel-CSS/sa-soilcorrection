@@ -27,4 +27,34 @@ public class CorrecaoCalcioMagnesio implements ICorrecaoNutriente<FonteCalcioMag
 
         return qtdeAplicar * 150;
     }
+    
+    public String calculaPorcentagemIdealCalcio(int texturaSolo){
+        
+        if(texturaSolo <= 0 || texturaSolo > 2){
+            throw new IllegalArgumentException();
+        }
+        
+        if(texturaSolo == 1){
+            return "45 a 55";
+        }
+    
+        return "35 a 40";
+    }
+    
+    public String calculaPorcentagemIdealMagnesio(int texturaSolo){
+        
+        if(texturaSolo <= 0){
+            throw new IllegalArgumentException();
+        }
+        
+        if(texturaSolo > 2){
+            throw new IllegalArgumentException();
+        }
+        
+        if(texturaSolo == 1){
+            return "10 a 15";
+        }
+    
+        return "8 a 12";
+    }
 }

@@ -44,4 +44,20 @@ public class TestaCorrecaoCalcioMagnesio {
 
         assertEquals(922.682028553815, correcaoCalcioMagnesio.calculaCusto(500.0, qtdeAplicar));
     }
+
+    @Test
+    public void testacalculaPorcentagemIdealCalcio() {
+
+        var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
+
+        assertEquals("45 a 55", correcaoCalcioMagnesio.calculaPorcentagemIdealCalcio(1));
+    }
+
+    @Test
+    public void testacalculaPorcentagemIdealMagnesio() {
+
+        var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
+
+        assertEquals("10 a 15", correcaoCalcioMagnesio.calculaPorcentagemIdealMagnesio(1));
+    }
 }
