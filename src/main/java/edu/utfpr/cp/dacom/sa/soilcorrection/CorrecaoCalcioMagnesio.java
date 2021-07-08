@@ -82,4 +82,29 @@ public class CorrecaoCalcioMagnesio implements ICorrecaoNutriente<FonteCalcioMag
 
         return calcio / (calcio + potassio + magnesio + hidrogenioAluminio) * 100;
     }
+
+    public double calculaPorcentagemAtualMagnesio(
+            double calcio,
+            double magnesio,
+            double potassio,
+            double hidrogenioAluminio) {
+
+        if (calcio <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        if (magnesio <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        if (potassio <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        if (hidrogenioAluminio <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+        return magnesio / (calcio + potassio + magnesio + hidrogenioAluminio) * 100;
+    }
 }
