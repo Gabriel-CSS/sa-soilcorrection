@@ -46,7 +46,7 @@ public class TestaCorrecaoCalcioMagnesio {
     }
 
     @Test
-    public void testacalculaPorcentagemIdealCalcio() {
+    public void testaCalculaPorcentagemIdealCalcio() {
 
         var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
 
@@ -54,10 +54,19 @@ public class TestaCorrecaoCalcioMagnesio {
     }
 
     @Test
-    public void testacalculaPorcentagemIdealMagnesio() {
+    public void testaCalculaPorcentagemIdealMagnesio() {
 
         var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
 
         assertEquals("10 a 15", correcaoCalcioMagnesio.calculaPorcentagemIdealMagnesio(1));
+    }
+    
+    @Test
+    public void testaCalculaPorcentagemAtualCalcio() {
+
+        var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
+
+        assertEquals(44.68580294802172, 
+            correcaoCalcioMagnesio.calculaPorcentagemAtualCalcio(5.76, 1.63, 0.15, 5.35));
     }
 }
