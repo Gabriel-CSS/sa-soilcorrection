@@ -152,4 +152,17 @@ public class CorrecaoCalcioMagnesio implements ICorrecaoNutriente<FonteCalcioMag
         
         return (100 * (calcio + magnesio + potassio)) / somaNutrientes;
     }
+
+    public String calculaVIdeal(int texturaSolo) {
+
+        if (texturaSolo <= 0 || texturaSolo > 2) {
+            throw new IllegalArgumentException();
+        }
+
+        if (texturaSolo == 1) {
+            return "60 a 70%";
+        }
+
+        return "50%";
+    }
 }
