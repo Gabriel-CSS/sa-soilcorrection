@@ -122,4 +122,13 @@ public class TestaCorrecaoCalcioMagnesio {
 
         assertEquals("60 a 70%", correcaoCalcioMagnesio.calculaVIdeal(1));
     }
+
+    @Test
+    public void testaCalculaVAposCorrecao() {
+
+        var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
+
+        assertEquals(71.88811171572492,
+            correcaoCalcioMagnesio.calculaVAposCorrecao(55.000000000000014, 13.888111715724902, 3));
+    }
 }

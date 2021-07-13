@@ -165,4 +165,24 @@ public class CorrecaoCalcioMagnesio implements ICorrecaoNutriente<FonteCalcioMag
 
         return "50%";
     }
+
+    public double calculaVAposCorrecao(
+        double partCalcioAposCorrecao,
+        double partMagnesioAposCorrecao,
+        double partPotassioAposCorrecao) {
+
+        if (partCalcioAposCorrecao <= 0) {
+            throw new IllegalArgumentException();
+        }
+            
+        if (partMagnesioAposCorrecao <= 0) {
+            throw new IllegalArgumentException();
+        }
+        
+        if (partPotassioAposCorrecao <= 0) {
+            throw new IllegalArgumentException();
+        }
+        
+        return partCalcioAposCorrecao + partMagnesioAposCorrecao + partPotassioAposCorrecao;
+    }
 }
