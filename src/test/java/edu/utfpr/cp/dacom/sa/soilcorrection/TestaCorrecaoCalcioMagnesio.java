@@ -105,4 +105,13 @@ public class TestaCorrecaoCalcioMagnesio {
         assertEquals(13.888111715724902, 
             correcaoCalcioMagnesio.calculaPartMagnesioAposCorrecao(5.76, 1.63, 0.15, 5.35, 1.79017760015694));
     }
+
+    @Test
+    public void testaCalculaVAtual() {
+        
+        var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
+
+        assertEquals(58.494957331264544, 
+            correcaoCalcioMagnesio.calculaVAtual(5.76, 1.63, 0.15, 5.35));
+    }
 }

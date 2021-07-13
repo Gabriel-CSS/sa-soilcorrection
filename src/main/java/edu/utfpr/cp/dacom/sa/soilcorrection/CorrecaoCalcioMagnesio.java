@@ -141,4 +141,15 @@ public class CorrecaoCalcioMagnesio implements ICorrecaoNutriente<FonteCalcioMag
 
         return magnesioAposCorrecao / somaNutrientes * 100;
     }
+
+    public double calculaVAtual(
+        double calcio,
+        double magnesio,
+        double potassio,
+        double hidrogenioAluminio) {
+
+        var somaNutrientes = somaNutrientes(calcio, magnesio, potassio, hidrogenioAluminio);
+        
+        return (100 * (calcio + magnesio + potassio)) / somaNutrientes;
+    }
 }
