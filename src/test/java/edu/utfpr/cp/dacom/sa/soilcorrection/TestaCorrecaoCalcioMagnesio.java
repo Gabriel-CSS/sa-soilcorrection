@@ -78,4 +78,13 @@ public class TestaCorrecaoCalcioMagnesio {
         assertEquals(12.645461598138091, 
             correcaoCalcioMagnesio.calculaPorcentagemAtualMagnesio(5.76, 1.63, 0.15, 5.35));
     }
+
+    @Test
+    public void testaSomaNutrientes() {
+        
+        var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
+
+        assertEquals(12.89, 
+            correcaoCalcioMagnesio.somaNutrientes(5.76, 1.63, 0.15, 5.35));
+    }
 }

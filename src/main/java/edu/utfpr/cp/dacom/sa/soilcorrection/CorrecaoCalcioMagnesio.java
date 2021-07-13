@@ -64,23 +64,9 @@ public class CorrecaoCalcioMagnesio implements ICorrecaoNutriente<FonteCalcioMag
             double potassio,
             double hidrogenioAluminio) {
 
-        if (calcio <= 0) {
-            throw new IllegalArgumentException();
-        }
+        var somaNutrientes = somaNutrientes(calcio, magnesio, potassio, hidrogenioAluminio);
 
-        if (magnesio <= 0) {
-            throw new IllegalArgumentException();
-        }
-
-        if (potassio <= 0) {
-            throw new IllegalArgumentException();
-        }
-
-        if (hidrogenioAluminio <= 0) {
-            throw new IllegalArgumentException();
-        }
-
-        return calcio / (calcio + potassio + magnesio + hidrogenioAluminio) * 100;
+        return calcio / somaNutrientes * 100;
     }
 
     public double calculaPorcentagemAtualMagnesio(
@@ -89,22 +75,33 @@ public class CorrecaoCalcioMagnesio implements ICorrecaoNutriente<FonteCalcioMag
             double potassio,
             double hidrogenioAluminio) {
 
+        var somaNutrientes = somaNutrientes(calcio, magnesio, potassio, hidrogenioAluminio);
+
+        return magnesio / somaNutrientes * 100;
+    }
+
+    public double somaNutrientes(
+        double calcio,
+        double magnesio,
+        double potassio,
+        double hidrogenioAluminio) {
+        
         if (calcio <= 0) {
             throw new IllegalArgumentException();
         }
-
+    
         if (magnesio <= 0) {
             throw new IllegalArgumentException();
         }
-
+    
         if (potassio <= 0) {
             throw new IllegalArgumentException();
         }
-
+    
         if (hidrogenioAluminio <= 0) {
             throw new IllegalArgumentException();
         }
 
-        return magnesio / (calcio + potassio + magnesio + hidrogenioAluminio) * 100;
+        return calcio + magnesio + potassio + hidrogenioAluminio;
     }
 }
