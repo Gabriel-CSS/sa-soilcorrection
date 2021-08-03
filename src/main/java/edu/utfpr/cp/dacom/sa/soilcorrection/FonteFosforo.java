@@ -3,6 +3,7 @@ package edu.utfpr.cp.dacom.sa.soilcorrection;
 import java.util.Set;
 
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -14,5 +15,5 @@ public enum FonteFosforo implements IFonteNutriente {
     MAP(0.48, Set.of(new NutrienteAdicional(NomeNutrienteAdicional.CALCIO, 0.09)));
 
     private final double teorFonte;
-    private final Set<NutrienteAdicional> nutrientesAdicionais;
+    @NonNull final Set<NutrienteAdicional> nutrientesAdicionais;
 }
