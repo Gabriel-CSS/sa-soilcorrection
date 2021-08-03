@@ -30,9 +30,9 @@ public class TestaCorrecaoCalcioMagnesio {
 
         var correcaoCalcioMagnesio = new CorrecaoCalcioMagnesio();
 
-        var qtdeAplicar = new ConverteTonHaEmKgHa().converte(1.84536405710763);//1.85
+        var qtdeAplicar = 3.50775578515434000000;
 
-        assertEquals(922.68, correcaoCalcioMagnesio.calculaCusto(500.0, qtdeAplicar), 0.01);
+        assertEquals(526.16, correcaoCalcioMagnesio.calculaEnxofreFornecido(qtdeAplicar, 4), 0.1);
     }
 
     @Test
