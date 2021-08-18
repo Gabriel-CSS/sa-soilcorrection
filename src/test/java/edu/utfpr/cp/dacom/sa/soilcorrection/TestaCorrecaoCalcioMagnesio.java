@@ -4,6 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import edu.utfpr.cp.dacom.sa.soilcorrection.conversoes.ConverteTonHaEmKgHa;
+import edu.utfpr.cp.dacom.sa.soilcorrection.correcoes.correcoesNutrientes.CorrecaoCalcioMagnesio;
+import edu.utfpr.cp.dacom.sa.soilcorrection.enums.fontes.fonteNutrientes.FonteCalcioMagnesio;
+
 public class TestaCorrecaoCalcioMagnesio {
 
     @Test

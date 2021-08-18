@@ -2,6 +2,11 @@ package edu.utfpr.cp.dacom.sa.soilcorrection;
 
 import org.junit.jupiter.api.Test;
 
+import edu.utfpr.cp.dacom.sa.soilcorrection.conversoes.ConverteMgDm3EmKgHa;
+import edu.utfpr.cp.dacom.sa.soilcorrection.conversoes.conversoesKgHa.ConverteKgHaEmP2O5;
+import edu.utfpr.cp.dacom.sa.soilcorrection.correcoes.correcoesNutrientes.CorrecaoFosforo;
+import edu.utfpr.cp.dacom.sa.soilcorrection.enums.fontes.fonteNutrientes.FonteFosforo;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestaCorrecaoFosforo {
